@@ -19,8 +19,9 @@ Out[3]: [[1, 1], [2, 3], [4, 4]]
 ```
 
 ## Performance
+Over 100x faster than python native implementation on large data.
+
 10k random points can be processed in a few milliseconds. 
-Over 100x faster than python native implementation.
 
 ```
 $ python3 benchmark.py
