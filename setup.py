@@ -20,22 +20,25 @@ with open("README.md", "r") as fh:
 
 setup(
     name="crdp",
-    version="0.0.1",
+    version="0.0.2",
     author="Ran Bi",
     author_email="biran0079@gmail.com",
     description="A fast Ramer-Douglas-Peucker algorithm implementation.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/biran0079/crdp",
-    packages=find_packages(),
     keywords="rdp ramer douglas peucker line simplification cython",
     license="MIT",
+    packages=(
+            find_packages()
+    ),
+    install_requires=[],
     extras_require=dict(
         dev=[
-            'cython>=0.29',
-            'pytest',
+            'cython',
         ],
     ),
+
     ext_modules=extensions,
     classifiers=[
         "Programming Language :: Python :: 3",
