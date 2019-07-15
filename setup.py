@@ -20,7 +20,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="crdp",
-    version="0.0.5",
+    version="0.0.1",
     author="Ran Bi",
     author_email="biran0079@gmail.com",
     description="A fast Ramer-Douglas-Peucker algorithm implementation.",
