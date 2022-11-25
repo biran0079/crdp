@@ -11,7 +11,7 @@ try:
                            compiler_directives={
                                'language_level': 3
                            })
-except ImportError:
+except (ImportError,ModuleNotFoundError):
     pass
 
 
@@ -32,7 +32,7 @@ setup(
     packages=(
             find_packages()
     ),
-    install_requires=['cython'],
+    install_requires=[],
     extras_require=dict(
         dev=[
             'cython',
