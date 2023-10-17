@@ -1,5 +1,4 @@
 from setuptools import setup, Extension, find_packages
-from Cython.Build import cythonize
 
 extensions = [
     Extension('crdp', ['crdp.pyx']),
@@ -11,7 +10,7 @@ try:
                            compiler_directives={
                                'language_level': 3
                            })
-except ImportError:
+except (ImportError,ModuleNotFoundError):
     pass
 
 
@@ -20,7 +19,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="crdp",
-    version="0.0.2",
+    version="0.0.3",
     author="Ran Bi",
     author_email="biran0079@gmail.com",
     description="A fast Ramer-Douglas-Peucker algorithm implementation.",
@@ -32,7 +31,7 @@ setup(
     packages=(
             find_packages()
     ),
-    install_requires=[],
+    install_requires=['cython'],
     extras_require=dict(
         dev=[
             'cython',
